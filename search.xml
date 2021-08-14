@@ -12,6 +12,21 @@
       </tags>
   </entry>
   <entry>
+    <title>hexo admin 的使用教程</title>
+    <url>/2021/08/11/hexo-admin-%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h4 id="1-Install-hexo-admin"><a href="#1-Install-hexo-admin" class="headerlink" title="1.Install hexo-admin"></a>1.Install hexo-admin</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">npm install hexo-admin</span><br></pre></td></tr></table></figure>
+<h4 id="2-use-following-command-and-open-the-website-localhost-4000-admin"><a href="#2-use-following-command-and-open-the-website-localhost-4000-admin" class="headerlink" title="2.use following command and open the website:localhost:4000/admin"></a>2.use following command and open the website:localhost:4000/admin</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">localhost:<span class="number">4000</span>/admin</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/pasted-0.png" alt="upload successful"></p>
+]]></content>
+      <categories>
+        <category>Hexo相关教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2021/08/11/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -30,43 +45,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>hexo admin 的使用教程</title>
-    <url>/2021/08/11/hexo-admin-%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<h4 id="1-Install-hexo-admin"><a href="#1-Install-hexo-admin" class="headerlink" title="1.Install hexo-admin"></a>1.Install hexo-admin</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">npm install hexo-admin</span><br></pre></td></tr></table></figure>
-<h4 id="2-use-following-command-and-open-the-website-localhost-4000-admin"><a href="#2-use-following-command-and-open-the-website-localhost-4000-admin" class="headerlink" title="2.use following command and open the website:localhost:4000/admin"></a>2.use following command and open the website:localhost:4000/admin</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">localhost:<span class="number">4000</span>/admin</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/pasted-0.png" alt="upload successful"></p>
-]]></content>
-      <categories>
-        <category>Hexo相关教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo deploy报错问题</title>
-    <url>/2021/08/14/hexo-deploy%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h5 id="暂时为空"><a href="#暂时为空" class="headerlink" title="暂时为空"></a>暂时为空</h5>]]></content>
-  </entry>
-  <entry>
-    <title>mac电脑端口占用问题的解决</title>
-    <url>/2021/08/13/mac%E7%94%B5%E8%84%91%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/</url>
-    <content><![CDATA[<h6 id="打开终端，输入sudo-lsof-i-被占用的端口号（我这里是4000端口被占用）输入密码查看占用端口进程的PID-我这里是526）"><a href="#打开终端，输入sudo-lsof-i-被占用的端口号（我这里是4000端口被占用）输入密码查看占用端口进程的PID-我这里是526）" class="headerlink" title="打开终端，输入sudo lsof -i:被占用的端口号（我这里是4000端口被占用）输入密码查看占用端口进程的PID(我这里是526）"></a>打开终端，输入sudo lsof -i:被占用的端口号（我这里是4000端口被占用）输入密码查看占用端口进程的PID(我这里是526）</h6><p><img src="/images/pasted-2.png" alt="upload successful"></p>
-<h6 id="输入指令sudo-kill-9-PID，杀死进程，被占用的端口就释放出来"><a href="#输入指令sudo-kill-9-PID，杀死进程，被占用的端口就释放出来" class="headerlink" title="输入指令sudo kill -9 PID，杀死进程，被占用的端口就释放出来"></a>输入指令sudo kill -9 PID，杀死进程，被占用的端口就释放出来</h6><p><img src="/images/pasted-4.png" alt="upload successful"></p>
-<style>
-  img{
-  </style>]]></content>
-      <categories>
-        <category>电脑相关问题</category>
-        <category>Mac电脑</category>
-      </categories>
-      <tags>
-        <tag>mac</tag>
-        <tag>端口占用</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>判断101-200之间有多少个素数,并输出所有素数。</title>
     <url>/2021/08/11/%E5%88%A4%E6%96%AD101-200%E4%B9%8B%E9%97%B4%E6%9C%89%E5%A4%9A%E5%B0%91%E4%B8%AA%E7%B4%A0%E6%95%B0-%E5%B9%B6%E8%BE%93%E5%87%BA%E6%89%80%E6%9C%89%E7%B4%A0%E6%95%B0%E3%80%82/</url>
     <content><![CDATA[<h5 id="第一种方案："><a href="#第一种方案：" class="headerlink" title="第一种方案："></a>第一种方案：</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int <span class="function"><span class="title">main</span>(<span class="params"></span>)</span></span><br><span class="line">&#123;</span><br><span class="line"> int i,j;</span><br><span class="line"> int flag;</span><br><span class="line"> <span class="keyword">for</span>(i=<span class="number">100</span>;i&lt;=<span class="number">200</span>;i++)&#123;</span><br><span class="line">     flag=<span class="number">0</span>;</span><br><span class="line">     <span class="keyword">for</span>(j=<span class="number">2</span>;j&lt;i;j++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(i%j==<span class="number">0</span>)&#123;</span><br><span class="line">             flag=<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(flag==<span class="number">0</span>)&#123;</span><br><span class="line">        printf(<span class="string">&quot;%d\n&quot;</span>,i);</span><br><span class="line">        &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -81,6 +59,42 @@
       </tags>
   </entry>
   <entry>
+    <title>hexo deploy之后将整个项目上传到github的branch中</title>
+    <url>/2021/08/14/hexo-deploy%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h5 id="网上找了许多方法都没能解决我的问题"><a href="#网上找了许多方法都没能解决我的问题" class="headerlink" title="网上找了许多方法都没能解决我的问题"></a>网上找了许多方法都没能解决我的问题</h5><p>后来发现是因为hexo——blog文件夹下多了一个.git的文件夹，将它删除就解决了。<br>其中的原理大概是hexo d命令执行时 优先选择.git文件下的路径进行执行，导致报错，或者将整个项目上传到github的branch中，导致网页无法正常访问。</p>
+<span id="more"></span>
+<p>遇见问题建议新建一个blog，使用命令：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<p>生成一个全新的blog，然后与已有的blog文件夹进行比对，就相当于找不同了，我发现多了一个.git的隐藏文件夹（注：记得把显示隐藏文件夹打开）<br></p>
+<h5 id="下面附上我的hexo部署步骤"><a href="#下面附上我的hexo部署步骤" class="headerlink" title="下面附上我的hexo部署步骤"></a>下面附上我的hexo部署步骤</h5><!--more-->
+
+<p>前提：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<h5 id="1、ssh的配置"><a href="#1、ssh的配置" class="headerlink" title="1、ssh的配置"></a>1、ssh的配置</h5><p>先进到.ssh文件夹中(注意在用户名目录下），输入以下命令，记得换成自己注册github的邮箱。一路回车。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">cd /.ssh</span><br><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;your_email@example.com&quot;</span> </span><br></pre></td></tr></table></figure>
+<p>生成之后使用下面命令。然后复制所显示的所有内容。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+<p>点击头像打开setting</p>
+<p><img src="/images/pasted-5.png" alt="upload successful"><br>选择<br>ssh<br><img src="/images/pasted-6.png" alt="upload successful"><br>new一个<br><img src="/images/pasted-7.png" alt="upload successful"><br>把<br>刚复制<br>的<br>东西<br>粘贴到这里面去名字随便起</p>
+<p><img src="/images/pasted-9.png" alt="upload successful"><br>然后执行：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>测试一下<br>如图所示便是成功了<br><img src="/images/pasted-10.png" alt="upload successful"></p>
+<h5 id="2、开始部署"><a href="#2、开始部署" class="headerlink" title="2、开始部署"></a>2、开始部署</h5><p>如果你不是像我一样呆的话，直接执行命令</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>就没啥事情，但是如果你像我一样呆的话，可以看看下面的<br>打开blog下的_config.yml在最下面添加上：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  <span class="attr">repo</span>: git@github.com:springli07/springli07.github.io.git#注意这个是使用ssh的时候用的</span><br><span class="line">  #https:<span class="comment">//github.com/springli07/springli07.github.io #这个是使用https协议用的需要输入github的账号密码，但是现在已经不支持了，可以使用私有秘钥当成密码输进去，但是每次进去都要输，很麻烦，所以还是建议使用ssh，当然你使用ssh的时候，也不要写成这个哦。</span></span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>当你搞清楚这些之后，那许多问题就迎刃而解了。文末附上hexo init的文件目录</p>
+<p><img src="/images/pasted-11.png" alt="upload successful"></p>
+]]></content>
+      <categories>
+        <category>Hexo相关教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>猴子分桃问题</title>
     <url>/2021/08/11/%E7%8C%B4%E5%AD%90%E5%88%86%E6%A1%83%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int <span class="function"><span class="title">main</span>(<span class="params"></span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//题目：海滩上有一堆桃子，五只猴子来分。</span></span><br><span class="line">    <span class="comment">//    第一只猴子把这堆桃子凭据分为五份，多了一个，这只猴子把多的一个扔入海中，</span></span><br><span class="line">    <span class="comment">//    拿走了一份。第二只猴子把剩下的桃子又平均分成五份，又多了一个，</span></span><br><span class="line">    <span class="comment">//    它同样把多的一个扔入海中，拿走了一份，第三、第四、第五只猴子都是这样做的，</span></span><br><span class="line">    <span class="comment">//    问海滩上原来最少有多少个桃子？</span></span><br><span class="line">	       <span class="comment">// int divide_start=4,divide_end=4,monkey_num=5;</span></span><br><span class="line">        <span class="comment">//while (monkey_num!=0) &#123;</span></span><br><span class="line">        <span class="comment">//    if (divide_end%4==0&amp;&amp;divide_end!=0) &#123;//因为divide_end必须是4的倍数</span></span><br><span class="line">        <span class="comment">//        divide_end=((divide_end/4)*5)+1;//sum*5+1=s s-(s-1)/5-1</span></span><br><span class="line">        <span class="comment">//        monkey_num--;</span></span><br><span class="line">        <span class="comment">//    &#125;else&#123;</span></span><br><span class="line">        <span class="comment">//        divide_start+=4;</span></span><br><span class="line">        <span class="comment">//        divide_end=divide_start;</span></span><br><span class="line">        <span class="comment">//        monkey_num=5;</span></span><br><span class="line">        <span class="comment">//   。 &#125;</span></span><br><span class="line">        <span class="comment">//&#125;</span></span><br><span class="line">    int divide_peach(int divide_start, int divide_end, int monkey_num);</span><br><span class="line">    printf(<span class="string">&quot;原来有%d个桃子&quot;</span>, divide_peach(<span class="number">4</span>, <span class="number">4</span>, <span class="number">5</span>));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">int <span class="function"><span class="title">divide_peach</span>(<span class="params">int divide_start, int divide_end, int monkey_num</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (monkey_num == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> divide_end;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (divide_end % <span class="number">4</span> == <span class="number">0</span> &amp;&amp; divide_end != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> divide_peach(divide_start, (divide_end / <span class="number">4</span>) * <span class="number">5</span> + <span class="number">1</span>, --monkey_num);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            divide_start += <span class="number">4</span>;</span><br><span class="line">            <span class="keyword">return</span> divide_peach(divide_start, divide_start, <span class="number">5</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -90,6 +104,25 @@
       </categories>
       <tags>
         <tag>algorithm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mac电脑端口占用问题的解决</title>
+    <url>/2021/08/13/mac%E7%94%B5%E8%84%91%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/</url>
+    <content><![CDATA[<h6 id="打开终端，输入sudo-lsof-i-被占用的端口号（我这里是4000端口被占用）输入密码查看占用端口进程的PID-我这里是526）"><a href="#打开终端，输入sudo-lsof-i-被占用的端口号（我这里是4000端口被占用）输入密码查看占用端口进程的PID-我这里是526）" class="headerlink" title="打开终端，输入sudo lsof -i:被占用的端口号（我这里是4000端口被占用）输入密码查看占用端口进程的PID(我这里是526）"></a>打开终端，输入sudo lsof -i:被占用的端口号（我这里是4000端口被占用）输入密码查看占用端口进程的PID(我这里是526）</h6><p><img src="/images/pasted-2.png" alt="upload successful"></p>
+<h6 id="输入指令sudo-kill-9-PID，杀死进程，被占用的端口就释放出来"><a href="#输入指令sudo-kill-9-PID，杀死进程，被占用的端口就释放出来" class="headerlink" title="输入指令sudo kill -9 PID，杀死进程，被占用的端口就释放出来"></a>输入指令sudo kill -9 PID，杀死进程，被占用的端口就释放出来</h6><p><img src="/images/pasted-4.png" alt="upload successful"></p>
+<style>
+  img{
+      width:100%
+  }
+<style></style>]]></content>
+      <categories>
+        <category>电脑相关问题</category>
+        <category>Mac电脑</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
+        <tag>端口占用</tag>
       </tags>
   </entry>
 </search>
