@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>C语言实现输出九九乘法表</title>
+    <url>/2021/08/11/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E8%BE%93%E5%87%BA%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E8%A1%A8/</url>
+    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">include&lt;stdio.h&gt;</span><br><span class="line">int <span class="function"><span class="title">main</span>(<span class="params"></span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    int i, j, result;</span><br><span class="line">    printf(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">1</span>; j &lt;= i; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            result = i * j;</span><br><span class="line">            printf(<span class="string">&quot;%d*%d=%-3d&quot;</span>, i, j, result); <span class="comment">/*-3d表示左对齐，占3位*/</span></span><br><span class="line">        &#125;</span><br><span class="line">        printf(<span class="string">&quot;\n&quot;</span>); <span class="comment">/*每一行后换行*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+      <tags>
+        <tag>algorithm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2021/08/11/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -17,17 +28,6 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>C语言实现输出九九乘法表</title>
-    <url>/2021/08/11/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E8%BE%93%E5%87%BA%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E8%A1%A8/</url>
-    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">include&lt;stdio.h&gt;</span><br><span class="line">int <span class="function"><span class="title">main</span>(<span class="params"></span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    int i, j, result;</span><br><span class="line">    printf(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">1</span>; j &lt;= i; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            result = i * j;</span><br><span class="line">            printf(<span class="string">&quot;%d*%d=%-3d&quot;</span>, i, j, result); <span class="comment">/*-3d表示左对齐，占3位*/</span></span><br><span class="line">        &#125;</span><br><span class="line">        printf(<span class="string">&quot;\n&quot;</span>); <span class="comment">/*每一行后换行*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>algorithm</category>
-      </categories>
-      <tags>
-        <tag>algorithm</tag>
-      </tags>
   </entry>
   <entry>
     <title>hexo admin 的使用教程</title>
@@ -62,7 +62,7 @@
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
 
 <p>点击头像打开setting</p>
-<p><img src="/images/pasted-5.png" alt="upload successful"><br>选择<br>ssh<br><img src="/images/pasted-6.png" alt="upload successful"><br>new一个<br><img src="/images/pasted-7.png" alt="upload successful"><br>把<br>刚复制<br>的<br>东西<br>粘贴到这里面去名字随便起</p>
+<p><img src="/images/pasted-5.png" alt="upload successful"><br>选择<br>ssh<br><img src="/images/pasted-6.png" alt="upload successful"><br>new一个<br><img src="/images/pasted-7.png" alt="upload successful"><br>把刚复制的东西粘贴到这里面去名字随便起</p>
 <p><img src="/images/pasted-9.png" alt="upload successful"><br>然后执行：</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 <p>测试一下<br>如图所示便是成功了<br><img src="/images/pasted-10.png" alt="upload successful"></p>
