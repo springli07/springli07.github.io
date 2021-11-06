@@ -114,6 +114,27 @@
       </tags>
   </entry>
   <entry>
+    <title>如何在Jupyter notebook中添加可选的kernel中</title>
+    <url>/2021/11/06/%E5%A6%82%E4%BD%95%E5%9C%A8Jupyter-notebook%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%8F%AF%E9%80%89%E7%9A%84kernel%E4%B8%AD/</url>
+    <content><![CDATA[<h5 id="Frist-of-all"><a href="#Frist-of-all" class="headerlink" title="Frist of all"></a>Frist of all</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install ipykernel</span><br></pre></td></tr></table></figure>
+
+<h5 id="If-something-goes-wrong-re-enter-the-following-code"><a href="#If-something-goes-wrong-re-enter-the-following-code" class="headerlink" title="If something goes wrong, re-enter the following code"></a>If something goes wrong, re-enter the following code</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install ipykernel</span><br></pre></td></tr></table></figure>
+<h5 id="Then-input-this-code"><a href="#Then-input-this-code" class="headerlink" title="Then input this code"></a>Then input this code</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">python -m ipykernel install --name pytorch</span><br></pre></td></tr></table></figure>
+<h5 id="Now-let’s-take-a-look-at-the-kernels-installed-in-Jupyter-notebook"><a href="#Now-let’s-take-a-look-at-the-kernels-installed-in-Jupyter-notebook" class="headerlink" title="Now let’s take a look at the kernels installed in Jupyter notebook."></a>Now let’s take a look at the kernels installed in Jupyter notebook.</h5><p>input:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">jupyter kernelspec list</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Environment configuration</category>
+      </categories>
+      <tags>
+        <tag>notebook</tag>
+        <tag>jupyter</tag>
+        <tag>kernel</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>猴子分桃问题</title>
     <url>/2021/08/11/%E7%8C%B4%E5%AD%90%E5%88%86%E6%A1%83%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<p>题目：海滩上有一堆桃子，五只猴子来分。<br>第一只猴子把这堆桃子凭据分为五份，多了一个，这只猴子把多的一个扔入海中，<br>拿走了一份。第二只猴子把剩下的桃子又平均分成五份，又多了一个，<br> 它同样把多的一个扔入海中，拿走了一份，第三、第四、第五只猴子都是这样做的，问海滩上原来最少有多少个桃子？<span id="more"></span></p>
