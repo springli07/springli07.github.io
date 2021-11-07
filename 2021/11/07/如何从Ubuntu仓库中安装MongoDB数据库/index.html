@@ -22,15 +22,21 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":true,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="SpringLi">
-<meta property="og:url" content="http://example.com/categories/Hexo%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/index.html">
+  <meta name="description" content="Method1：From Ubuntu Library install MongoDBThis is an easy way to install MongoDB in the system, you only need to enter a command. Install MongoDBFirst, make sure your package is up to date. Open the">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Install MongoDB Database in Ubuntu">
+<meta property="og:url" content="http://example.com/2021/11/07/%E5%A6%82%E4%BD%95%E4%BB%8EUbuntu%E4%BB%93%E5%BA%93%E4%B8%AD%E5%AE%89%E8%A3%85MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/index.html">
 <meta property="og:site_name" content="SpringLi">
+<meta property="og:description" content="Method1：From Ubuntu Library install MongoDBThis is an easy way to install MongoDB in the system, you only need to enter a command. Install MongoDBFirst, make sure your package is up to date. Open the">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-11-07T12:40:00.000Z">
+<meta property="article:modified_time" content="2021-11-07T13:10:30.470Z">
 <meta property="article:author" content="Spring Li">
+<meta property="article:tag" content="Ubuntu">
+<meta property="article:tag" content="MongoDB">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/categories/Hexo%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/">
+<link rel="canonical" href="http://example.com/2021/11/07/%E5%A6%82%E4%BD%95%E4%BB%8EUbuntu%E4%BB%93%E5%BA%93%E4%B8%AD%E5%AE%89%E8%A3%85MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/">
 
 
 <script id="page-configurations">
@@ -38,12 +44,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Category: Hexo相关教程 | SpringLi</title>
+  <title>Install MongoDB Database in Ubuntu | SpringLi</title>
   
 
 
@@ -190,77 +196,190 @@
         <div class="content-wrap">
           
 
-          <div class="content category">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/07/%E5%A6%82%E4%BD%95%E4%BB%8EUbuntu%E4%BB%93%E5%BA%93%E4%B8%AD%E5%AE%89%E8%A3%85MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Spring Li">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SpringLi">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Install MongoDB Database in Ubuntu
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-11-07 20:40:00 / Modified: 21:10:30" itemprop="dateCreated datePublished" datetime="2021-11-07T20:40:00+08:00">2021-11-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Ubuntu/" itemprop="url" rel="index"><span itemprop="name">Ubuntu</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Ubuntu/Installation-tutorial/" itemprop="url" rel="index"><span itemprop="name">Installation tutorial</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">Hexo相关教程
-          <small>Category</small>
-        </h2>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan: </span>
+    
+    
+      <a title="changyan" href="/2021/11/07/%E5%A6%82%E4%BD%95%E4%BB%8EUbuntu%E4%BB%93%E5%BA%93%E4%B8%AD%E5%AE%89%E8%A3%85MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/#SOHUCS" itemprop="discussionUrl">
+        <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2021/11/07/如何从Ubuntu仓库中安装MongoDB数据库/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1.4k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
-    </div>
+        <h5 id="Method1："><a href="#Method1：" class="headerlink" title="Method1："></a>Method1：</h5><h6 id="From-Ubuntu-Library-install-MongoDB"><a href="#From-Ubuntu-Library-install-MongoDB" class="headerlink" title="From Ubuntu Library install MongoDB"></a>From Ubuntu Library install MongoDB</h6><p>This is an easy way to install MongoDB in the system, you only need to enter a command.</p>
+<h5 id="Install-MongoDB"><a href="#Install-MongoDB" class="headerlink" title="Install MongoDB"></a>Install MongoDB</h5><p>First, make sure your package is up to date. Open the terminal and enter:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update &amp;&amp; sudo apt upgrade -y</span><br></pre></td></tr></table></figure>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<p>Continue to install MongoDB：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install mongodb</span><br></pre></td></tr></table></figure>
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-08-14T23:58:00+08:00"
-              content="2021-08-14">
-          08-14
-        </time>
-      </div>
+<p>That’s it! MongoDB is now installed on your computer.</p>
+<p>The MongoDB service should be started automatically during installation, but check the service status:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl status mongodb</span><br></pre></td></tr></table></figure>
+<p>Check if the MongoDB service is running.</p>
+<p>Run MongoDB</p>
+<p>MongoDB is currently a systemd service, so we use systemctl to check and modify its status, using the following command:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl status mongodb </span><br><span class="line">sudo systemctl stop mongodb </span><br><span class="line">sudo systemctl start mongodb </span><br><span class="line">sudo systemctl restart mongodb</span><br></pre></td></tr></table></figure>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/08/14/hexo-deploy%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/" itemprop="url">
-            <span itemprop="name">hexo deploy之后将整个项目上传到github的branch中</span>
-          </a>
-      </div>
+<p>You can also modify whether MongoDB automatically starts with the system (default: enabled):</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl disable mongodb </span><br><span class="line">sudo systemctl enable mongodb</span><br></pre></td></tr></table></figure>
 
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-08-11T21:58:00+08:00"
-              content="2021-08-11">
-          08-11
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/08/11/hexo-admin-%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" itemprop="url">
-            <span itemprop="name">hexo admin 的使用教程</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
+<p>To start using (creating and editing) the database, please enter:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongo</span><br></pre></td></tr></table></figure>
+<p>This will start the mongo shell. For detailed information on queries and options, please check the manual.</p>
+<p>Note: Depending on how you plan to use MongoDB, you may need to adjust the firewall. But this is beyond the content of this article, and depends on your configuration.</p>
+<p>Uninstall MongoDB</p>
+<p>If you install MongoDB from the Ubuntu repository and want to uninstall it (you may have to install it in an officially supported way), please enter:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl stop mongodb </span><br><span class="line">sudo apt purge mongodb </span><br><span class="line">sudo apt autoremove</span><br></pre></td></tr></table></figure>
+<p>This should uninstall MongoDB completely. Make sure to back up any collections or documents you might want to keep, as they will be deleted!</p>
 
     </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.jpg" alt="Spring Li WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="Spring Li Alipay">
+        <p>Alipay</p>
+      </div>
+
   </div>
-  
-  
-  
+</div>
 
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
+              <a href="/tags/MongoDB/" rel="tag"># MongoDB</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/11/06/The-conpos/" rel="prev" title="English composition universal template">
+      <i class="fa fa-chevron-left"></i> English composition universal template
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/11/07/Install-NVM-in-Ubuntu/" rel="next" title="Install NVM in Ubuntu">
+      Install NVM in Ubuntu <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
 
           </div>
           
+    
+  <div class="comments">
+    <div id="SOHUCS"></div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -307,6 +426,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Method1%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">Method1：</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#From-Ubuntu-Library-install-MongoDB"><span class="nav-number">1.1.</span> <span class="nav-text">From Ubuntu Library install MongoDB</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Install-MongoDB"><span class="nav-number">2.</span> <span class="nav-text">Install MongoDB</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -526,6 +646,19 @@
 
   
 
+  <script>
+  NexT.utils.loadComments(document.querySelector('#SOHUCS'), () => {
+    var appid = 'cyvBsCcsm';
+    var conf = 'ea4b25ba776f1a4f52b3ce97655f4f02';
+    var width = window.innerWidth || document.documentElement.clientWidth;
+    if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
+    } else {
+      var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});
+    }
+  });
+  </script>
+  <script src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
 
 </body>
 </html>

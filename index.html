@@ -196,6 +196,259 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/07/Install-NVM-in-Ubuntu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Spring Li">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SpringLi">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/11/07/Install-NVM-in-Ubuntu/" class="post-title-link" itemprop="url">Install NVM in Ubuntu</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-11-07 20:53:00 / Modified: 21:09:55" itemprop="dateCreated datePublished" datetime="2021-11-07T20:53:00+08:00">2021-11-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Ubuntu/" itemprop="url" rel="index"><span itemprop="name">Ubuntu</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Ubuntu/Installation-tutorial/" itemprop="url" rel="index"><span itemprop="name">Installation tutorial</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan: </span>
+    
+    
+      <a title="changyan" href="/2021/11/07/Install-NVM-in-Ubuntu/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://example.com/2021/11/07/Install-NVM-in-Ubuntu/" class="cy_cmt_count" data-xid="2021/11/07/Install-NVM-in-Ubuntu/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1.1k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="1、There-is-basically-no-problem-at-this-step-of-logging-in-to-the-cloud-server"><a href="#1、There-is-basically-no-problem-at-this-step-of-logging-in-to-the-cloud-server" class="headerlink" title="1、There is basically no problem at this step of logging in to the cloud server"></a>1、There is basically no problem at this step of logging in to the cloud server</h5><h5 id="2、Enter-the-install-nvm-command"><a href="#2、Enter-the-install-nvm-command" class="headerlink" title="2、Enter the install nvm command:"></a>2、Enter the install nvm command:</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https:<span class="comment">//raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="3、There-may-be-errors-during-installation"><a href="#3、There-may-be-errors-during-installation" class="headerlink" title="3、There may be errors during installation:"></a>3、There may be errors during installation:</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#Failed to connect to raw.githubusercontent.com port <span class="number">443</span></span><br></pre></td></tr></table></figure>
+
+<p>Reason: Due to some factors, GitHub’s domain name resolution was polluted.</p>
+<p>Solution: modify the host file, the command is as follows</p>
+<h6 id="1-Open-the-host-file"><a href="#1-Open-the-host-file" class="headerlink" title="(1) Open the host file"></a>(1) Open the host file</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/hosts</span><br></pre></td></tr></table></figure>
+<h6 id="2-Fill-in-the-following"><a href="#2-Fill-in-the-following" class="headerlink" title="(2) Fill in the following"></a>(2) Fill in the following</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">199.232</span><span class="number">.96</span><span class="number">.133</span> raw.githubusercontent.com</span><br></pre></td></tr></table></figure>
+<h6 id="2-Exit-and-save-and-you-can-execute-the-second-step-again"><a href="#2-Exit-and-save-and-you-can-execute-the-second-step-again" class="headerlink" title="(2) Exit and save, and you can execute the second step again"></a>(2) Exit and save, and you can execute the second step again</h6><h5 id="4、Solve-the-problem"><a href="#4、Solve-the-problem" class="headerlink" title="4、Solve the problem"></a>4、Solve the problem</h5><p>Entering the following commands If you still have problems.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm --version  </span><br></pre></td></tr></table></figure>
+<p>If prompted “nvm command not found”.</p>
+<p>Solve the problem of “nvm command not found”.</p>
+<p>Enter the “.nvm” folder，create a new file “.bash_profile”.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch .bash_profile <span class="comment">//create a new file</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim .bash_profile <span class="comment">//open file</span></span><br></pre></td></tr></table></figure>
+<p>Enter the following</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> NVM_DIR=<span class="string">&quot;$HOME/.nvm&quot;</span></span><br><span class="line">[ -s <span class="string">&quot;$NVM_DIR/nvm.sh&quot;</span> ] &amp;&amp; \. <span class="string">&quot;$NVM_DIR/nvm.sh&quot;</span> # This loads nvm</span><br></pre></td></tr></table></figure>
+<p>Then close the file and execute the file, terminal input:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source .bash_profile</span><br></pre></td></tr></table></figure>
+<h5 id="5、Test-result"><a href="#5、Test-result" class="headerlink" title="5、Test result"></a>5、Test result</h5><p>terminal input:：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm --version  <span class="comment">//The version number appears to indicate a successful installation</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+
+
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/07/%E5%A6%82%E4%BD%95%E4%BB%8EUbuntu%E4%BB%93%E5%BA%93%E4%B8%AD%E5%AE%89%E8%A3%85MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Spring Li">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SpringLi">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/11/07/%E5%A6%82%E4%BD%95%E4%BB%8EUbuntu%E4%BB%93%E5%BA%93%E4%B8%AD%E5%AE%89%E8%A3%85MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-title-link" itemprop="url">Install MongoDB Database in Ubuntu</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-11-07 20:40:00 / Modified: 21:10:30" itemprop="dateCreated datePublished" datetime="2021-11-07T20:40:00+08:00">2021-11-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Ubuntu/" itemprop="url" rel="index"><span itemprop="name">Ubuntu</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Ubuntu/Installation-tutorial/" itemprop="url" rel="index"><span itemprop="name">Installation tutorial</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan: </span>
+    
+    
+      <a title="changyan" href="/2021/11/07/%E5%A6%82%E4%BD%95%E4%BB%8EUbuntu%E4%BB%93%E5%BA%93%E4%B8%AD%E5%AE%89%E8%A3%85MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://example.com/2021/11/07/%E5%A6%82%E4%BD%95%E4%BB%8EUbuntu%E4%BB%93%E5%BA%93%E4%B8%AD%E5%AE%89%E8%A3%85MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/" class="cy_cmt_count" data-xid="2021/11/07/如何从Ubuntu仓库中安装MongoDB数据库/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1.4k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="Method1："><a href="#Method1：" class="headerlink" title="Method1："></a>Method1：</h5><h6 id="From-Ubuntu-Library-install-MongoDB"><a href="#From-Ubuntu-Library-install-MongoDB" class="headerlink" title="From Ubuntu Library install MongoDB"></a>From Ubuntu Library install MongoDB</h6><p>This is an easy way to install MongoDB in the system, you only need to enter a command.</p>
+<h5 id="Install-MongoDB"><a href="#Install-MongoDB" class="headerlink" title="Install MongoDB"></a>Install MongoDB</h5><p>First, make sure your package is up to date. Open the terminal and enter:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update &amp;&amp; sudo apt upgrade -y</span><br></pre></td></tr></table></figure>
+
+<p>Continue to install MongoDB：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install mongodb</span><br></pre></td></tr></table></figure>
+
+<p>That’s it! MongoDB is now installed on your computer.</p>
+<p>The MongoDB service should be started automatically during installation, but check the service status:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl status mongodb</span><br></pre></td></tr></table></figure>
+<p>Check if the MongoDB service is running.</p>
+<p>Run MongoDB</p>
+<p>MongoDB is currently a systemd service, so we use systemctl to check and modify its status, using the following command:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl status mongodb </span><br><span class="line">sudo systemctl stop mongodb </span><br><span class="line">sudo systemctl start mongodb </span><br><span class="line">sudo systemctl restart mongodb</span><br></pre></td></tr></table></figure>
+
+<p>You can also modify whether MongoDB automatically starts with the system (default: enabled):</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl disable mongodb </span><br><span class="line">sudo systemctl enable mongodb</span><br></pre></td></tr></table></figure>
+
+<p>To start using (creating and editing) the database, please enter:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongo</span><br></pre></td></tr></table></figure>
+<p>This will start the mongo shell. For detailed information on queries and options, please check the manual.</p>
+<p>Note: Depending on how you plan to use MongoDB, you may need to adjust the firewall. But this is beyond the content of this article, and depends on your configuration.</p>
+<p>Uninstall MongoDB</p>
+<p>If you install MongoDB from the Ubuntu repository and want to uninstall it (you may have to install it in an officially supported way), please enter:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl stop mongodb </span><br><span class="line">sudo apt purge mongodb </span><br><span class="line">sudo apt autoremove</span><br></pre></td></tr></table></figure>
+<p>This should uninstall MongoDB completely. Make sure to back up any collections or documents you might want to keep, as they will be deleted!</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+
+
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/06/The-conpos/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1066,110 +1319,11 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/11/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Spring Li">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SpringLi">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/08/11/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-08-11 19:41:02" itemprop="dateCreated datePublished" datetime="2021-08-11T19:41:02+08:00">2021-08-11</time>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan: </span>
-    
-    
-      <a title="changyan" href="/2021/08/11/hello-world/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://example.com/2021/08/11/hello-world/" class="cy_cmt_count" data-xid="2021/08/11/hello-world/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>367</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-
-
-      </footer>
-  </article>
-  
-  
-  
-
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
 
 
 
@@ -1236,20 +1390,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -1294,13 +1448,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">Symbols count total: </span>
-    <span title="Symbols count total">4k</span>
+    <span title="Symbols count total">7k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">Reading time total &asymp;</span>
-    <span title="Reading time total">4 mins.</span>
+    <span title="Reading time total">6 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
