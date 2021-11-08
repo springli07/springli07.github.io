@@ -46,20 +46,6 @@
       </tags>
   </entry>
   <entry>
-    <title>English composition universal template</title>
-    <url>/2021/11/06/The-conpos/</url>
-    <content><![CDATA[<h4 id="Compostion"><a href="#Compostion" class="headerlink" title="Compostion"></a><center>Compostion<center></center></center></h4><p> &emsp;&emsp;As is vividly portrayed painting, in the first picture, there exist a man reading the book. In the second picture, there exist a man sitting the chair front of the bookshelf. The water is to fish what book is to human, which aroused heated discussion among the public.<br><br>&emsp;&emsp;The painting, evidently, symbolically unveil a widely-recongnized fact that nothing is significant than knowledge in people daily life and social development. Why does reading the book recevied such high emphasis? People ought to attach the  importance to knowledge. The factors prove mixed. First and more, in the society level, country will have wider platform and win more influence on global state. Further more, in the individual level ,It can help individual realized their personal value and enjoy high sense of achievement. Which gives them impetus in their professional career. Finally, everyone who stand a better chance to turn crisis to opportunities forge ahead constantly when confront with a great challenge.<br><br>   &emsp;&emsp;In short, in the views of every aspect of this issues, we should bear in mind that reading books is of great significance to both ourselves and society. It is advisable for us to reading books of widely than  before.</p>
-]]></content>
-      <categories>
-        <category>English</category>
-        <category>composition</category>
-      </categories>
-      <tags>
-        <tag>English</tag>
-        <tag>composition</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2021/08/11/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -90,6 +76,20 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>English composition universal template</title>
+    <url>/2021/11/06/The-conpos/</url>
+    <content><![CDATA[<h4 id="Compostion"><a href="#Compostion" class="headerlink" title="Compostion"></a><center>Compostion<center></center></center></h4><p> &emsp;&emsp;As is vividly portrayed painting, in the first picture, there exist a man reading the book. In the second picture, there exist a man sitting the chair front of the bookshelf. The water is to fish what book is to human, which aroused heated discussion among the public.<br><br>&emsp;&emsp;The painting, evidently, symbolically unveil a widely-recongnized fact that nothing is significant than knowledge in people daily life and social development. Why does reading the book recevied such high emphasis? People ought to attach the  importance to knowledge. The factors prove mixed. First and more, in the society level, country will have wider platform and win more influence on global state. Further more, in the individual level ,It can help individual realized their personal value and enjoy high sense of achievement. Which gives them impetus in their professional career. Finally, everyone who stand a better chance to turn crisis to opportunities forge ahead constantly when confront with a great challenge.<br><br>   &emsp;&emsp;In short, in the views of every aspect of this issues, we should bear in mind that reading books is of great significance to both ourselves and society. It is advisable for us to reading books of widely than  before.</p>
+]]></content>
+      <categories>
+        <category>English</category>
+        <category>composition</category>
+      </categories>
+      <tags>
+        <tag>English</tag>
+        <tag>composition</tag>
       </tags>
   </entry>
   <entry>
@@ -204,12 +204,16 @@
     <title>如何在Jupyter notebook中添加可选的kernel中</title>
     <url>/2021/11/06/%E5%A6%82%E4%BD%95%E5%9C%A8Jupyter-notebook%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%8F%AF%E9%80%89%E7%9A%84kernel%E4%B8%AD/</url>
     <content><![CDATA[<h5 id="Frist-of-all"><a href="#Frist-of-all" class="headerlink" title="Frist of all"></a>Frist of all</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install ipykernel</span><br></pre></td></tr></table></figure>
-
+<p><img src="/images/pasted-12.png" alt="upload successful"></p>
 <h5 id="If-something-goes-wrong-re-enter-the-following-code"><a href="#If-something-goes-wrong-re-enter-the-following-code" class="headerlink" title="If something goes wrong, re-enter the following code"></a>If something goes wrong, re-enter the following code</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install ipykernel</span><br></pre></td></tr></table></figure>
+<p><img src="/images/pasted-13.png" alt="upload successful"></p>
 <h5 id="Then-input-this-code"><a href="#Then-input-this-code" class="headerlink" title="Then input this code"></a>Then input this code</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">python -m ipykernel install --name pytorch</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/pasted-14.png" alt="upload successful"></p>
 <h5 id="Now-let’s-take-a-look-at-the-kernels-installed-in-Jupyter-notebook"><a href="#Now-let’s-take-a-look-at-the-kernels-installed-in-Jupyter-notebook" class="headerlink" title="Now let’s take a look at the kernels installed in Jupyter notebook."></a>Now let’s take a look at the kernels installed in Jupyter notebook.</h5><p>input:</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">jupyter kernelspec list</span><br></pre></td></tr></table></figure>
 
+<p><img src="/images/pasted-15.png" alt="upload successful"></p>
 ]]></content>
       <categories>
         <category>Python</category>
