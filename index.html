@@ -196,6 +196,236 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/20/SVDD-IMAGE-ONE-CLASSFIAL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Spring Li">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SpringLi">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/20/SVDD-IMAGE-ONE-CLASSFIAL/" class="post-title-link" itemprop="url">SVDD_IMAGE_ONE_CLASSFIAL</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-12-20 13:48:45 / Modified: 13:54:27" itemprop="dateCreated datePublished" datetime="2021-12-20T13:48:45+08:00">2021-12-20</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan: </span>
+    
+    
+      <a title="changyan" href="/2021/12/20/SVDD-IMAGE-ONE-CLASSFIAL/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://example.com/2021/12/20/SVDD-IMAGE-ONE-CLASSFIAL/" class="cy_cmt_count" data-xid="2021/12/20/SVDD-IMAGE-ONE-CLASSFIAL/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>17k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>16 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># improt package</span></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image  </span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> glob <span class="keyword">import</span> glob</span><br><span class="line"><span class="keyword">import</span> os, glob</span><br><span class="line"><span class="keyword">import</span> random, csv</span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> matplotlib.font_manager</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> svm</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#HOG特征提取</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Hog_descriptor</span>():</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, img, cell_size=<span class="number">16</span>, bin_size=<span class="number">8</span></span>):</span></span><br><span class="line">        self.img = img</span><br><span class="line">        self.img = np.sqrt(img / np.<span class="built_in">max</span>(img))</span><br><span class="line">        self.img = img * <span class="number">255</span></span><br><span class="line">        self.cell_size = cell_size</span><br><span class="line">        self.bin_size = bin_size</span><br><span class="line">        self.angle_unit = <span class="number">360</span> // self.bin_size</span><br><span class="line">        <span class="keyword">assert</span> <span class="built_in">type</span>(self.bin_size) == <span class="built_in">int</span>, <span class="string">&quot;bin_size should be integer,&quot;</span></span><br><span class="line">        <span class="keyword">assert</span> <span class="built_in">type</span>(self.cell_size) == <span class="built_in">int</span>, <span class="string">&quot;cell_size should be integer,&quot;</span></span><br><span class="line">        <span class="keyword">assert</span> <span class="built_in">type</span>(self.angle_unit) == <span class="built_in">int</span>, <span class="string">&quot;bin_size should be divisible by 360&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">extract</span>(<span class="params">self</span>):</span></span><br><span class="line">        height, width = self.img.shape</span><br><span class="line">        gradient_magnitude, gradient_angle = self.global_gradient()</span><br><span class="line">        gradient_magnitude = <span class="built_in">abs</span>(gradient_magnitude)</span><br><span class="line">        cell_gradient_vector = np.zeros((height // self.cell_size, width // self.cell_size, self.bin_size))</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(cell_gradient_vector.shape[<span class="number">0</span>]):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(cell_gradient_vector.shape[<span class="number">1</span>]):</span><br><span class="line">                cell_magnitude = gradient_magnitude[i * self.cell_size:(i + <span class="number">1</span>) * self.cell_size,</span><br><span class="line">                                 j * self.cell_size:(j + <span class="number">1</span>) * self.cell_size]</span><br><span class="line">                cell_angle = gradient_angle[i * self.cell_size:(i + <span class="number">1</span>) * self.cell_size,</span><br><span class="line">                             j * self.cell_size:(j + <span class="number">1</span>) * self.cell_size]</span><br><span class="line">                cell_gradient_vector[i][j] = self.cell_gradient(cell_magnitude, cell_angle)</span><br><span class="line"></span><br><span class="line">        hog_image = self.render_gradient(np.zeros([height, width]), cell_gradient_vector)</span><br><span class="line">        hog_vector = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(cell_gradient_vector.shape[<span class="number">0</span>] - <span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(cell_gradient_vector.shape[<span class="number">1</span>] - <span class="number">1</span>):</span><br><span class="line">                block_vector = []</span><br><span class="line">                block_vector.extend(cell_gradient_vector[i][j])</span><br><span class="line">                block_vector.extend(cell_gradient_vector[i][j + <span class="number">1</span>])</span><br><span class="line">                block_vector.extend(cell_gradient_vector[i + <span class="number">1</span>][j])</span><br><span class="line">                block_vector.extend(cell_gradient_vector[i + <span class="number">1</span>][j + <span class="number">1</span>])</span><br><span class="line">                mag = <span class="keyword">lambda</span> vector: math.sqrt(<span class="built_in">sum</span>(i ** <span class="number">2</span> <span class="keyword">for</span> i <span class="keyword">in</span> vector))</span><br><span class="line">                magnitude = mag(block_vector)</span><br><span class="line">                <span class="keyword">if</span> magnitude != <span class="number">0</span>:</span><br><span class="line">                    normalize = <span class="keyword">lambda</span> block_vector, magnitude: [element / magnitude <span class="keyword">for</span> element <span class="keyword">in</span> block_vector]</span><br><span class="line">                    block_vector = normalize(block_vector, magnitude)</span><br><span class="line">                hog_vector.append(block_vector)</span><br><span class="line">        <span class="keyword">return</span> hog_vector, hog_image</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">global_gradient</span>(<span class="params">self</span>):</span></span><br><span class="line">        gradient_values_x = cv2.Sobel(self.img, cv2.CV_64F, <span class="number">1</span>, <span class="number">0</span>, ksize=<span class="number">5</span>)</span><br><span class="line">        gradient_values_y = cv2.Sobel(self.img, cv2.CV_64F, <span class="number">0</span>, <span class="number">1</span>, ksize=<span class="number">5</span>)</span><br><span class="line">        gradient_magnitude = cv2.addWeighted(gradient_values_x, <span class="number">0.5</span>, gradient_values_y, <span class="number">0.5</span>, <span class="number">0</span>)</span><br><span class="line">        gradient_angle = cv2.phase(gradient_values_x, gradient_values_y, angleInDegrees=<span class="literal">True</span>)</span><br><span class="line">        <span class="keyword">return</span> gradient_magnitude, gradient_angle</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">cell_gradient</span>(<span class="params">self, cell_magnitude, cell_angle</span>):</span></span><br><span class="line">        orientation_centers = [<span class="number">0</span>] * self.bin_size</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(cell_magnitude.shape[<span class="number">0</span>]):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(cell_magnitude.shape[<span class="number">1</span>]):</span><br><span class="line">                gradient_strength = cell_magnitude[i][j]</span><br><span class="line">                gradient_angle = cell_angle[i][j]</span><br><span class="line">                min_angle, max_angle, mod = self.get_closest_bins(gradient_angle)</span><br><span class="line">                orientation_centers[min_angle] += (gradient_strength * (<span class="number">1</span> - (mod / self.angle_unit)))</span><br><span class="line">                orientation_centers[max_angle] += (gradient_strength * (mod / self.angle_unit))</span><br><span class="line">        <span class="keyword">return</span> orientation_centers</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_closest_bins</span>(<span class="params">self, gradient_angle</span>):</span></span><br><span class="line">        idx = <span class="built_in">int</span>(gradient_angle / self.angle_unit)</span><br><span class="line">        mod = gradient_angle % self.angle_unit</span><br><span class="line">        <span class="keyword">return</span> idx, (idx + <span class="number">1</span>) % self.bin_size, mod</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">render_gradient</span>(<span class="params">self, image, cell_gradient</span>):</span></span><br><span class="line">        cell_width = self.cell_size / <span class="number">2</span></span><br><span class="line">        max_mag = np.array(cell_gradient).<span class="built_in">max</span>()</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(cell_gradient.shape[<span class="number">0</span>]):</span><br><span class="line">            <span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(cell_gradient.shape[<span class="number">1</span>]):</span><br><span class="line">                cell_grad = cell_gradient[x][y]</span><br><span class="line">                cell_grad /= max_mag</span><br><span class="line">                angle = <span class="number">0</span></span><br><span class="line">                angle_gap = self.angle_unit</span><br><span class="line">                <span class="keyword">for</span> magnitude <span class="keyword">in</span> cell_grad:</span><br><span class="line">                    angle_radian = math.radians(angle)</span><br><span class="line">                    x1 = <span class="built_in">int</span>(x * self.cell_size + magnitude * cell_width * math.cos(angle_radian))</span><br><span class="line">                    y1 = <span class="built_in">int</span>(y * self.cell_size + magnitude * cell_width * math.sin(angle_radian))</span><br><span class="line">                    x2 = <span class="built_in">int</span>(x * self.cell_size - magnitude * cell_width * math.cos(angle_radian))</span><br><span class="line">                    y2 = <span class="built_in">int</span>(y * self.cell_size - magnitude * cell_width * math.sin(angle_radian))</span><br><span class="line">                    cv2.line(image, (y1, x1), (y2, x2), <span class="built_in">int</span>(<span class="number">255</span> * math.sqrt(magnitude)))</span><br><span class="line">                    angle += angle_gap</span><br><span class="line">        <span class="keyword">return</span> image</span><br><span class="line">In [<span class="number">120</span>]:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">process</span>(<span class="params">data,cell_size,bin_size</span>):</span></span><br><span class="line">    hog = Hog_descriptor(data[<span class="number">0</span>], cell_size, bin_size)</span><br><span class="line">    vector, image = hog.extract()</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">len</span>(data)):</span><br><span class="line">        <span class="built_in">print</span>(i)</span><br><span class="line">        hog = Hog_descriptor(data[i], cell_size, bin_size)</span><br><span class="line">        vector_0, image = hog.extract()</span><br><span class="line">        vector = np.append(vector,vector_0)</span><br><span class="line">    datas=np.array(vector).reshape(<span class="built_in">len</span>(data),<span class="number">3025</span>,<span class="number">40</span>)</span><br><span class="line">    <span class="keyword">return</span> datas</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># flatten</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fal</span>(<span class="params">data</span>):</span></span><br><span class="line">    data=data.reshape(<span class="built_in">len</span>(data),<span class="number">121000</span>)</span><br><span class="line">    <span class="keyword">return</span> data</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># shuffle data load</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">load_csv_shuffle</span>(<span class="params">root, filename, name2label</span>):</span></span><br><span class="line">    <span class="comment"># 从csv文件返回images,labels列表</span></span><br><span class="line">    <span class="comment"># root:数据集根目录，filename:csv文件名， name2label:类别名编码表</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(os.path.join(root, filename)):</span><br><span class="line">        <span class="comment"># 如果csv文件不存在，则创建</span></span><br><span class="line">        images = []</span><br><span class="line">        <span class="keyword">for</span> name <span class="keyword">in</span> name2label.keys(): <span class="comment"># 遍历所有子目录，获得所有的图片</span></span><br><span class="line">            <span class="comment"># 只考虑后缀为png,jpg,jpeg的图片：&#x27;pokemon\\mewtwo\\00001.png</span></span><br><span class="line">            images += glob.glob(os.path.join(root, name, <span class="string">&#x27;*.png&#x27;</span>))</span><br><span class="line">            images += glob.glob(os.path.join(root, name, <span class="string">&#x27;*.jpg&#x27;</span>))</span><br><span class="line">            images += glob.glob(os.path.join(root, name, <span class="string">&#x27;*.jpeg&#x27;</span>))</span><br><span class="line">        <span class="comment"># 打印数据集信息：1167, &#x27;pokemon\\bulbasaur\\00000000.png&#x27;</span></span><br><span class="line">        <span class="comment"># print(len(images), images)</span></span><br><span class="line">        random.shuffle(images) <span class="comment"># 随机打散顺序</span></span><br><span class="line">        <span class="comment"># 创建csv文件，并存储图片路径及其label信息</span></span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(os.path.join(root, filename), mode=<span class="string">&#x27;w&#x27;</span>, newline=<span class="string">&#x27;&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            writer = csv.writer(f)</span><br><span class="line">            <span class="keyword">for</span> img <span class="keyword">in</span> images:  <span class="comment"># &#x27;pokemon\\bulbasaur\\00000000.png&#x27;</span></span><br><span class="line">                name = img.split(os.sep)[-<span class="number">2</span>]</span><br><span class="line">                label = name2label[name]</span><br><span class="line">                writer.writerow([img, label])</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;written into csv file:&#x27;</span>, filename)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 此时已经有csv文件，直接读取</span></span><br><span class="line">    images, labels = [], []</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(os.path.join(root, filename)) <span class="keyword">as</span> f:</span><br><span class="line">        reader = csv.reader(f)</span><br><span class="line">        <span class="keyword">for</span> row <span class="keyword">in</span> reader:</span><br><span class="line">            <span class="comment"># &#x27;pokemon\\bulbasaur\\00000000.png&#x27;, 0</span></span><br><span class="line">            img, label = row</span><br><span class="line">            label = <span class="built_in">int</span>(label)</span><br><span class="line">            images.append(img)</span><br><span class="line">            labels.append(label) </span><br><span class="line">    <span class="comment"># 返回图片路径list和标签list</span></span><br><span class="line">    <span class="keyword">return</span> images, labels</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># no shuffle</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">load_csv</span>(<span class="params">root, filename, name2label</span>):</span></span><br><span class="line">    <span class="comment"># 从csv文件返回images,labels列表</span></span><br><span class="line">    <span class="comment"># root:数据集根目录，filename:csv文件名， name2label:类别名编码表</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(os.path.join(root, filename)):</span><br><span class="line">        <span class="comment"># 如果csv文件不存在，则创建</span></span><br><span class="line">        images = []</span><br><span class="line">        <span class="keyword">for</span> name <span class="keyword">in</span> name2label.keys(): <span class="comment"># 遍历所有子目录，获得所有的图片</span></span><br><span class="line">            <span class="comment"># 只考虑后缀为png,jpg,jpeg的图片：&#x27;pokemon\\mewtwo\\00001.png</span></span><br><span class="line">            images += glob.glob(os.path.join(root, name, <span class="string">&#x27;*.png&#x27;</span>))</span><br><span class="line">            images += glob.glob(os.path.join(root, name, <span class="string">&#x27;*.jpg&#x27;</span>))</span><br><span class="line">            images += glob.glob(os.path.join(root, name, <span class="string">&#x27;*.jpeg&#x27;</span>))</span><br><span class="line">        <span class="comment"># 打印数据集信息：1167, &#x27;pokemon\\bulbasaur\\00000000.png&#x27;</span></span><br><span class="line">        <span class="comment"># print(len(images), images)</span></span><br><span class="line">        <span class="comment"># random.shuffle(images) # 随机打散顺序</span></span><br><span class="line">        <span class="comment"># 创建csv文件，并存储图片路径及其label信息</span></span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(os.path.join(root, filename), mode=<span class="string">&#x27;w&#x27;</span>, newline=<span class="string">&#x27;&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            writer = csv.writer(f)</span><br><span class="line">            <span class="keyword">for</span> img <span class="keyword">in</span> images:  <span class="comment"># &#x27;pokemon\\bulbasaur\\00000000.png&#x27;</span></span><br><span class="line">                name = img.split(os.sep)[-<span class="number">2</span>]</span><br><span class="line">                label = name2label[name]</span><br><span class="line">                writer.writerow([img, label])</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;written into csv file:&#x27;</span>, filename)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 此时已经有csv文件，直接读取</span></span><br><span class="line">    images, labels = [], []</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(os.path.join(root, filename)) <span class="keyword">as</span> f:</span><br><span class="line">        reader = csv.reader(f)</span><br><span class="line">        <span class="keyword">for</span> row <span class="keyword">in</span> reader:</span><br><span class="line">            <span class="comment"># &#x27;pokemon\\bulbasaur\\00000000.png&#x27;, 0</span></span><br><span class="line">            img, label = row</span><br><span class="line">            label = <span class="built_in">int</span>(label)</span><br><span class="line">            images.append(img)</span><br><span class="line">            labels.append(label) </span><br><span class="line">    <span class="comment"># 返回图片路径list和标签list</span></span><br><span class="line">    <span class="keyword">return</span> images, labels</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># shuffle load_data</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">load_data_shuffle</span>(<span class="params">root</span>):</span></span><br><span class="line">    <span class="comment"># 创建数字编码表</span></span><br><span class="line">    name2label = &#123;&#125;  <span class="comment"># &quot;sq...&quot;:0</span></span><br><span class="line">    <span class="comment"># 遍历根目录下的子文件夹，并排序，保证映射关系固定</span></span><br><span class="line">    <span class="keyword">for</span> name <span class="keyword">in</span> <span class="built_in">sorted</span>(os.listdir(os.path.join(root))):</span><br><span class="line">        <span class="comment"># 跳过非文件夹</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> os.path.isdir(os.path.join(root, name)):</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        <span class="comment"># 给每个类别编码一个数字</span></span><br><span class="line">        name2label[name] = <span class="built_in">len</span>(name2label.keys())</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 读取Label信息</span></span><br><span class="line">    images, labels = load_csv_shuffle(root, <span class="string">&#x27;images.csv&#x27;</span>, name2label)</span><br><span class="line">    <span class="keyword">return</span> images, labels, name2label</span><br><span class="line">In [<span class="number">125</span>]:</span><br><span class="line"><span class="comment"># no shuffle load_data</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">load_data</span>(<span class="params">root</span>):</span></span><br><span class="line">    <span class="comment"># 创建数字编码表</span></span><br><span class="line">    name2label = &#123;&#125;  <span class="comment"># &quot;sq...&quot;:0</span></span><br><span class="line">    <span class="comment"># 遍历根目录下的子文件夹，并排序，保证映射关系固定</span></span><br><span class="line">    <span class="keyword">for</span> name <span class="keyword">in</span> <span class="built_in">sorted</span>(os.listdir(os.path.join(root))):</span><br><span class="line">        <span class="comment"># 跳过非文件夹</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> os.path.isdir(os.path.join(root, name)):</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        <span class="comment"># 给每个类别编码一个数字</span></span><br><span class="line">        name2label[name] = <span class="built_in">len</span>(name2label.keys())</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 读取Label信息</span></span><br><span class="line">    images, labels = load_csv(root, <span class="string">&#x27;images.csv&#x27;</span>, name2label)</span><br><span class="line">    <span class="keyword">return</span> images, labels, name2label</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># read data</span></span><br><span class="line">train_images_Path, train_labels, name2label=load_data_shuffle(<span class="string">&#x27;./train&#x27;</span>)</span><br><span class="line">test_images_Path, test_labels, name2label=load_data(<span class="string">&#x27;./test&#x27;</span>)</span><br><span class="line"><span class="comment"># print(test_labels)</span></span><br><span class="line"><span class="comment"># test_labels=np.array(test_labels).reshape(len(test_labels),1)</span></span><br><span class="line"><span class="comment"># test_labels</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> glob <span class="keyword">import</span> glob</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取数据</span></span><br><span class="line">train_images = [cv2.imread(file,cv2.IMREAD_GRAYSCALE) <span class="keyword">for</span> file <span class="keyword">in</span> glob(<span class="string">&#x27;./train/agood/*.png&#x27;</span>)]</span><br><span class="line">train_images=np.array(train_images)</span><br><span class="line">train_images=train_images[<span class="number">0</span>:<span class="number">50</span>]</span><br><span class="line"><span class="built_in">print</span>(train_images.shape)</span><br><span class="line"></span><br><span class="line">test_images=[cv2.imread(file,cv2.IMREAD_GRAYSCALE) <span class="keyword">for</span> file <span class="keyword">in</span> glob(<span class="string">&#x27;./test/agood/*.png&#x27;</span>)+glob(<span class="string">&#x27;./test/combined/*.png&#x27;</span>)]</span><br><span class="line">test_images=np.array(test_images)</span><br><span class="line"><span class="built_in">print</span>(test_images.shape)</span><br><span class="line"><span class="comment"># train_images=train_images[0:10]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># paramater</span></span><br><span class="line">cell_size=<span class="number">18</span></span><br><span class="line">bin_size=<span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># process train dataset</span></span><br><span class="line">train_images=process(train_images,cell_size,bin_size)</span><br><span class="line">train_images=fal(train_images)</span><br><span class="line"><span class="built_in">print</span>(train_images.shape)</span><br><span class="line"><span class="comment"># process test dataset</span></span><br><span class="line">test_images=process(test_images,cell_size,bin_size)</span><br><span class="line">test_images=fal(test_images)</span><br><span class="line"><span class="built_in">print</span>(test_images.shape) </span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># output</span></span><br><span class="line">(<span class="number">50</span>, <span class="number">1024</span>, <span class="number">1024</span>)</span><br><span class="line">(<span class="number">30</span>, <span class="number">1024</span>, <span class="number">1024</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_data</span>(<span class="params">train_images,train_label,test_images,test_label</span>):</span></span><br><span class="line">    trfea_list = []</span><br><span class="line">    trlab_list = []</span><br><span class="line">    tefea_list = []</span><br><span class="line">    telab_list = []</span><br><span class="line">    <span class="keyword">for</span> idx <span class="keyword">in</span> <span class="built_in">range</span>(train_images.shape[<span class="number">0</span>]):</span><br><span class="line">        trfea_list.append(train_images[idx,:].tolist())</span><br><span class="line">        trlab_list.append(train_label[idx])</span><br><span class="line">    <span class="keyword">for</span> idx <span class="keyword">in</span> <span class="built_in">range</span>(test_images.shape[<span class="number">0</span>]):</span><br><span class="line">        tefea_list.append(test_images[idx,:].tolist())</span><br><span class="line">        telab_list.append(test_label[idx])</span><br><span class="line">    </span><br><span class="line">    tefea = np.array(tefea_list).T</span><br><span class="line">    telab = np.array(telab_list)</span><br><span class="line">    tr_ok = []</span><br><span class="line">    Dtrain = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(trfea_list)):</span><br><span class="line">        <span class="keyword">if</span> trlab_list[i]==<span class="number">0</span>:</span><br><span class="line">            tr_ok.append(trfea_list[i])</span><br><span class="line">    Dtrain += tr_ok</span><br><span class="line">    <span class="built_in">print</span>(np.array(Dtrain).shape)</span><br><span class="line">    y = [<span class="number">0</span> <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(tr_ok))]</span><br><span class="line">    X = np.array(Dtrain).T</span><br><span class="line">    y = np.array(y).T</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">len</span>(X))</span><br><span class="line">    <span class="comment"># tr_ok = []</span></span><br><span class="line">    <span class="comment"># tr_ng = []</span></span><br><span class="line">    <span class="comment"># for i in range(len(trfea_list)):</span></span><br><span class="line">    <span class="comment">#     if trlab_list[i][0]==0:</span></span><br><span class="line">    <span class="comment">#         tr_ok.append(trfea_list[i])</span></span><br><span class="line">    <span class="comment">#     else:</span></span><br><span class="line">    <span class="comment">#         tr_ng.append(trfea_list[i])</span></span><br><span class="line">    <span class="comment"># Dtrain = []</span></span><br><span class="line">    <span class="comment"># for i in range(20):</span></span><br><span class="line">    <span class="comment">#     k = np.random.randint(0,len(tr_ng))</span></span><br><span class="line">    <span class="comment">#     Dtrain.append(tr_ng[k])</span></span><br><span class="line">    <span class="comment"># Dtrain += tr_ok</span></span><br><span class="line">    <span class="comment"># y = [-1 for i in range(20)] + [0 for i in range(len(tr_ok))]</span></span><br><span class="line">    <span class="comment"># X = np.array(Dtrain).T</span></span><br><span class="line">    <span class="comment"># y = np.array(y).T</span></span><br><span class="line">    <span class="keyword">return</span> X, y, tefea, telab</span><br><span class="line">In [<span class="number">129</span>]:</span><br><span class="line">X, y, tefea, telab=get_data(train_images,train_labels,test_images,test_labels)</span><br><span class="line">X.shape,y.reshape(<span class="built_in">len</span>(y),<span class="number">1</span>).shape, tefea.shape, telab.reshape(<span class="built_in">len</span>(telab),<span class="number">1</span>).shape</span><br><span class="line">(<span class="number">50</span>, <span class="number">121000</span>)</span><br><span class="line"><span class="number">121000</span></span><br></pre></td></tr></table></figure>
+<p>((121000, 50), (50, 1), (121000, 30), (30, 1))<br>In [130]:</p>
+<h1 id="model-parameter"><a href="#model-parameter" class="headerlink" title="model parameter"></a>model parameter</h1><p>type_num = 0<br>dim = 10<br>C = 0.1 #0.6<br>toler = 0.0001<br>maxIter = 40</p>
+<p>best_acc = 0<br>best_a = 0<br>best_r = 0<br>best_label = []<br>In [131]:</p>
+<h1 id="SVDD算法"><a href="#SVDD算法" class="headerlink" title="SVDD算法"></a>SVDD算法</h1><p>import numpy as np<br>import random</p>
+<p>def meet_limit_condition(alpha_i, data_i, a, R, C, toler):<br>    “””<br>    测试alphas[i]是否满足优化条件<br>    :param alpha_i:alphas[i]<br>    :param data_i:data_array[i]<br>    :param a:中心点<br>    :param R:半径<br>    :param C:惩罚因子<br>    :param toler:容忍度<br>    :return:满足优化条件则返回True，否则返回False<br>    “””<br>    # if abs(R ** 2 - np.dot((data_i - a), (data_i - a))) &gt; toler and 0 &lt; alpha_i &lt; C:<br>    Ei = R ** 2 - np.dot((data_i - a), (data_i - a))<br>    if (Ei &lt; -toler and alpha_i &lt; C) or (Ei &gt; toler and alpha_i &gt; 0):<br>        return True<br>    else:<br>        return False</p>
+<p>def selectJrand(i, m):<br>    “””<br>    随机选择一个整数<br>    Args:<br>        i  第一个alpha的下标<br>        m  所有alpha的数目<br>    Returns:<br>        j  返回一个不为i的随机数，在0~m之间的整数值<br>    “””<br>    j = i<br>    while j == i:<br>        j = int(random.uniform(0, m))<br>    return j<br>In [132]:<br>def calculate_alpha_j(data_array, alphas, i, j, a):<br>    “””<br>    data_array: 测试集<br>    alphas: 旧的alphas值<br>    i, j: 当前选出的将要进行优化的alpha的下标<br>    返回值: 新的alphas[j]值<br>    “””</p>
+<pre><code>a1 = np.array(a)
+x1 = np.array(data_array[i])
+x2 = np.array(data_array[j])
+
+x12 = np.dot(x1, x2)
+x1_2 = np.dot(x1, x1)
+x2_2 = np.dot(x2, x2)
+
+nu = np.dot(a1, x2) - x2_2 - np.dot(a1, x1) + x1_2 + \
+    alphas[i] * (x12 + x1_2) + alphas[j] * (x1_2 - x2_2 + 3 * x12)
+de = 2 * (x1_2 + x2_2 - 2 * x12)
+
+if de == 0:
+    return 0, False
+
+return -nu / de, True
+</code></pre>
+<p>def calculate_alpha_i(alphas, i):<br>    “””<br>    alphas: 新的alpha数组<br>    i: 要更新的alpha值的下标<br>    返回值： 新的alphas[i]<br>    “””<br>    alpha_sum = alphas.sum() - alphas[i]<br>    return 1 - alpha_sum<br>In [133]:<br>def smo(train_data, C=0.6, toler=0.001, maxIter=40):<br>    data_array = np.array(train_data)<br>    m, n = np.shape(data_array)<br>    print(“m:”,m,”n:”,n)<br>    alphas = np.array([1 / m] * m)<br>    R = 0</p>
+<pre><code>a = np.array([0.0] * n)
+for i in range(m):
+    a += alphas[i] * data_array[i]
+
+iter = 0
+while iter &lt; maxIter:
+    changed_flag = 0
+    for i in range(m):
+        if meet_limit_condition(alphas[i], data_array[i], a, R, C, toler):
+            j = selectJrand(i, m)
+
+            L = max(0, alphas[i] + alphas[j] - C)
+            H = min(C, alphas[i] + alphas[j])
+            if L == H:
+                continue
+
+            new_alpha_j, valid = calculate_alpha_j(
+                data_array, alphas, i, j, a)
+            if not valid:
+                continue
+
+            if new_alpha_j &lt; L:
+                new_alpha_j = L
+            elif new_alpha_j &gt; H:
+                new_alpha_j = H
+
+            if abs(new_alpha_j - alphas[j]) &lt; 0.001:
+                continue
+            else:
+                alphas[j] = new_alpha_j
+                alphas[i] = calculate_alpha_i(alphas, i)
+                changed_flag += 1
+
+            # check_alphas(alphas, C)
+
+            a, R = calculate_a_and_R(data_array, alphas, i, j, C)
+
+    if changed_flag == 0:
+        iter += 1
+    else:
+        iter = 0
+
+return a, R
+</code></pre>
+<p>def check_alphas(alphas, C):<br>    “””<br>    检测alphas是否符合要求<br>    :param alphas:alphas<br>    :param C:惩罚因子<br>    :return:符合返回True，否则返回False<br>    “””<br>    a_sum = 0<br>    for i in range(alphas.shape[0]):<br>        if alphas[i] &lt; -0.0001:<br>            print(“alphas” + str(i) + “:” + str(alphas[i]) + “ &lt; 0”)<br>        if alphas[i] &gt; C + 0.0001:<br>            print(“alphas” + str(i) + “:” + str(alphas[i]) + “ &gt; C”)<br>        a_sum += alphas[i]</p>
+<pre><code>if abs(a_sum - 1) &gt; 0.0001:
+    print(&quot;alphas sum != 1&quot;)
+    return False
+else:
+    return True
+</code></pre>
+<p>def calculate_a_and_R(data_array, alphas, i, j, C):<br>    “””<br>    计算a, R<br>    :param data_array:<br>    :param alphas:<br>    :param i:<br>    :param j:<br>    :param C:<br>    :return:<br>    “””<br>    m, n = np.shape(data_array)<br>    a = [0] * n<br>    for l in range(m):<br>        a += data_array[l] * alphas[l]</p>
+<pre><code>R1 = np.sqrt(np.dot(data_array[i] - a, data_array[i] - a))
+R2 = np.sqrt(np.dot(data_array[j] - a, data_array[j] - a))
+if 0 &lt; alphas[i] &lt; C:
+    R = R1
+elif 0 &lt; alphas[j] &lt; C:
+    R = R2
+else:
+    R = (R1 + R2) / 2.0
+
+return a, R
+</code></pre>
+<p>In [134]:</p>
+<h1 id="判别函数"><a href="#判别函数" class="headerlink" title="判别函数"></a>判别函数</h1><p>import numpy as np<br>from matplotlib import pyplot as plt</p>
+<p>def judge(test_data, a, R):<br>    m, n = np.shape(test_data)<br>    label = []<br>    for i in range(m):<br>        if np.dot(test_data[i] - a, test_data[i] - a) &lt;= R ** 2:<br>            label.append(0)<br>        else:<br>            label.append(1)</p>
+<pre><code>return label
+</code></pre>
+<p>def calculate_acc(result_label, correct_label):<br>    “””<br>    返回result_label与correct_label相同的比例<br>    :return: acc = (true positive + false positive)/all<br>    “””<br>    if len(result_label) != len(correct_label):<br>        return -1</p>
+<pre><code>acc = 0
+for i in range(len(result_label)):
+    if result_label[i] == correct_label[i]:
+        acc += 1
+
+return acc / len(result_label)
+</code></pre>
+<p>def draw_picture(train_data, test_data, correct_label, a, R, C, toler, acc):<br>    plt.figure()<br>    plt.scatter(test_data[:, 0], test_data[:, 1], c=correct_label)<br>    plt.scatter(train_data[:, 0], train_data[:, 1], c=’r’)<br>    plt.title(“C = “ + str(C) + “ toler = “ + str(toler) +<br>              “ R = “ + str(R)[0:4] + “ acc = “ + str(acc)[:4])<br>    theta = np.arange(0, 2 * np.pi, 0.01)<br>    x = a[0] + R * np.cos(theta)<br>    y = a[1] + R * np.sin(theta)</p>
+<pre><code>plt.plot(x, y)
+plt.show()
+</code></pre>
+<p>In [135]:<br>Dtrain, ytrain, Dtest, ytest = get_data(train_images,train_labels,test_images,test_labels)<br>ytrain=ytrain.reshape(len(ytrain),1)<br>ytest=ytest.reshape(len(ytest),1)<br>ytest.tolist()<br>Dtrain = Dtrain.T<br>Dtest = Dtest.T<br>print(Dtrain.shape, ytrain.shape, Dtest.shape, ytest.shape)<br>train_data = Dtrain[40:, :]<br>print(train_data.shape)<br>test_data, correct_label = Dtest, ytest<br>a, R = smo(train_data, C, toler, maxIter)<br>result_label = judge(test_data, a, R)<br>print(result_label)<br>(50, 121000)<br>121000<br>(50, 121000) (50, 1) (30, 121000) (30, 1)<br>(10, 121000)<br>m: 10 n: 121000<br>[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]<br>In [136]:</p>
+<h1 id="model-train"><a href="#model-train" class="headerlink" title="model train"></a>model train</h1><p>if <strong>name</strong> == ‘<strong>main</strong>‘:<br>    Dtrain, ytrain, Dtest, ytest = get_data(train_images,train_labels,test_images,test_labels)<br>    ytrain=ytrain.reshape(len(ytrain),1)<br>    ytest=ytest.reshape(len(ytest),1)<br>    Dtrain = Dtrain.T<br>    Dtest = Dtest.T<br>    print(Dtrain.shape, ytrain.shape, Dtest.shape, ytest.shape)<br>    train_data = Dtrain[20:, :]<br>    print(train_data.shape)<br>    test_data, correct_label = Dtest, ytest<br>    min_acc = 2<br>    avrg_acc = 0<br>    max_acc = -1<br>    for i in range(50):<br>        print(“epoch “,i)<br>        a, R = smo(train_data, C, toler, maxIter)<br>        result_label = judge(test_data, a, R)<br>        acc = calculate_acc(result_label, correct_label)<br>        if acc &gt; best_acc:<br>            best_acc = acc<br>            best_a = a<br>            best_r = R<br>            best_label = result_label</p>
+<pre><code>    avrg_acc += acc
+
+    if acc &lt; min_acc:
+        min_acc = acc
+    if acc &gt; max_acc:
+        max_acc = acc
+
+    #print(&quot;accuracy: &quot; + str(acc))
+avrg_acc /= 100
+print(&quot;train type:&quot; + str(type_num) + &quot;, dim=&quot; +
+      str(dim) + &quot; =&gt; best acc = &quot; + str(max_acc))
+print(&quot;model: a=&quot;+str(best_a)+&quot;, R=&quot;+str(best_r) + &quot;,C=&quot;+str(C))
+print(&quot;label(0-20:positive sample):&quot;)
+print(best_label)
+</code></pre>
+<p>(50, 121000)<br>121000<br>(50, 121000) (50, 1) (30, 121000) (30, 1)<br>(30, 121000)<br>epoch  0<br>m: 30 n: 121000<br>epoch  1<br>m: 30 n: 121000<br>epoch  2<br>m: 30 n: 121000<br>epoch  3<br>m: 30 n: 121000<br>epoch  4<br>m: 30 n: 121000<br>epoch  5<br>m: 30 n: 121000<br>epoch  6<br>m: 30 n: 121000<br>epoch  7<br>m: 30 n: 121000<br>epoch  8<br>m: 30 n: 121000<br>epoch  9<br>m: 30 n: 121000<br>epoch  10<br>m: 30 n: 121000<br>epoch  11<br>m: 30 n: 121000<br>epoch  12<br>m: 30 n: 121000<br>epoch  13<br>m: 30 n: 121000<br>epoch  14<br>m: 30 n: 121000<br>epoch  15<br>m: 30 n: 121000<br>epoch  16<br>m: 30 n: 121000<br>epoch  17<br>m: 30 n: 121000<br>epoch  18<br>m: 30 n: 121000<br>epoch  19<br>m: 30 n: 121000<br>epoch  20<br>m: 30 n: 121000<br>epoch  21<br>m: 30 n: 121000<br>epoch  22<br>m: 30 n: 121000<br>epoch  23<br>m: 30 n: 121000<br>epoch  24<br>m: 30 n: 121000<br>epoch  25<br>m: 30 n: 121000<br>epoch  26<br>m: 30 n: 121000<br>epoch  27<br>m: 30 n: 121000<br>epoch  28<br>m: 30 n: 121000<br>epoch  29<br>m: 30 n: 121000<br>epoch  30<br>m: 30 n: 121000<br>epoch  31<br>m: 30 n: 121000<br>epoch  32<br>m: 30 n: 121000<br>epoch  33<br>m: 30 n: 121000<br>epoch  34<br>m: 30 n: 121000<br>epoch  35<br>m: 30 n: 121000<br>epoch  36<br>m: 30 n: 121000<br>epoch  37<br>m: 30 n: 121000<br>epoch  38<br>m: 30 n: 121000<br>epoch  39<br>m: 30 n: 121000<br>epoch  40<br>m: 30 n: 121000<br>epoch  41<br>m: 30 n: 121000<br>epoch  42<br>m: 30 n: 121000<br>epoch  43<br>m: 30 n: 121000<br>epoch  44<br>m: 30 n: 121000<br>epoch  45<br>m: 30 n: 121000<br>epoch  46<br>m: 30 n: 121000<br>epoch  47<br>m: 30 n: 121000<br>epoch  48<br>m: 30 n: 121000<br>epoch  49<br>m: 30 n: 121000<br>train type:0, dim=10 =&gt; best acc = 0.8666666666666667<br>model: a=[0.18466436 0.06578467 0.03577375 … 0.0685853  0.02567655 0.05139069], R=27.083401210078584,C=0.1<br>label(0-20:positive sample):<br>[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1]<br>In [187]:<br>a,R,best_acc,best_label,best_a,best_r<br>R=np.array(R)<br>best_acc=np.array(best_acc)<br>best_r=np.array(best_r)<br>In [181]:</p>
+<h1 id="存储多个变量"><a href="#存储多个变量" class="headerlink" title="存储多个变量"></a>存储多个变量</h1><p>np.savez(“result.npz”,a=a, R=R, best_acc=best_acc, best_label=best_label, best_a=best_a,best_r=best_r) #使用前面的名字命名变量<br>In [192]:<br>r = np.load(“result.npz”) #加载一次即可<br>a=r[‘best_a’]<br>R=r[‘best_r’]<br>acc=r[‘best_acc’]<br>In [193]:</p>
+<h1 id="visualize"><a href="#visualize" class="headerlink" title="visualize"></a>visualize</h1><p>plt.figure()<br>plt.scatter(test_data[:125, 100], test_data[:125, 101], c=’orange’)<br>plt.scatter(test_data[125:, 100], test_data[125:, 101], c=’black’, alpha=0.3)<br>plt.scatter(train_data[:, 0], train_data[:, 1], c=’r’, alpha=0.1)<br>plt.title(“C = “ + str(C) + “ toler = “ + str(toler) +<br>            “ R = “ + str(R)[0:4] + “ acc = “ + str(acc)[:4])<br>theta = np.arange(0, 2 * np.pi, 0.01)<br>x = a[0] + R * np.cos(theta)<br>y = a[1] + R * np.sin(theta)</p>
+<p>plt.plot(x, y)<br>plt.show()</p>
+<p>In [194]:</p>
+<h1 id="visualize-for-various-dimenshion"><a href="#visualize-for-various-dimenshion" class="headerlink" title="visualize for various dimenshion"></a>visualize for various dimenshion</h1><p>plt.figure(figsize=(10, 20))<br>for i in range(9):<br>    plt.subplot(5,2,i+1)<br>    plt.scatter(test_data[:125, i], test_data[:125,i+1 ], c=’orange’)<br>    plt.scatter(test_data[125:, i], test_data[125:,i+1 ], c=’black’, alpha=0.3)<br>    plt.scatter(train_data[:, i], train_data[:, i+1], c=’r’, alpha=0.1)<br>    plt.title(“C = “ + str(C) + “ toler = “ + str(toler) +<br>              “ R = “ + str(R)[0:4] + “ acc = “ + str(acc)[:4])<br>    theta = np.arange(0, 2 * np.pi, 0.01)<br>    x = a[i] + R * np.cos(theta)<br>    y = a[i+1] + R * np.sin(theta)</p>
+<pre><code>plt.plot(x, y)
+</code></pre>
+<p>plt.show()</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+
+
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/07/Install-NVM-in-Ubuntu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1226,109 +1456,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/11/hexo-admin-%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Spring Li">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SpringLi">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/08/11/hexo-admin-%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">hexo admin 的使用教程</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-08-11 21:58:00 / Modified: 22:37:20" itemprop="dateCreated datePublished" datetime="2021-08-11T21:58:00+08:00">2021-08-11</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">Hexo相关教程</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan: </span>
-    
-    
-      <a title="changyan" href="/2021/08/11/hexo-admin-%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://example.com/2021/08/11/hexo-admin-%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" class="cy_cmt_count" data-xid="2021/08/11/hexo-admin-的使用教程/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>120</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="1-Install-hexo-admin"><a href="#1-Install-hexo-admin" class="headerlink" title="1.Install hexo-admin"></a>1.Install hexo-admin</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-admin</span><br></pre></td></tr></table></figure>
-<h4 id="2-use-following-command-and-open-the-website-localhost-4000-admin"><a href="#2-use-following-command-and-open-the-website-localhost-4000-admin" class="headerlink" title="2.use following command and open the website:localhost:4000/admin"></a>2.use following command and open the website:localhost:4000/admin</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localhost:<span class="number">4000</span>/admin</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/pasted-0.png" alt="upload successful"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-
-
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1400,7 +1527,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1458,13 +1585,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">Symbols count total: </span>
-    <span title="Symbols count total">7k</span>
+    <span title="Symbols count total">24k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">Reading time total &asymp;</span>
-    <span title="Reading time total">6 mins.</span>
+    <span title="Reading time total">22 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
